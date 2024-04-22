@@ -12,3 +12,173 @@ body{
     min-height: 100vh;
     background: #000;
 }
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #000;
+    box-shadow: 0 0 50px #0ef;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.wrapper.active .form-wrapper.sign-in{
+  transform: translateY(-490px);
+}
+
+.wrapper .form-wrapper.sign-up{
+    position: absolute;
+    top: 500px;
+    left: 0;
+  }
+
+  .wrapper.active .form-wrapper.sign-up{
+    transform: translateY(-490px);
+  }
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+h2{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 4px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -5px;
+}
+
+.input-group input:-webkit-autofill,
+.input-group input:-webkit-autofill:hover, 
+.input-group input:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+   
+}
+.input-group input:invalid{
+    color: #ffffff43;
+}
+
+ form:nth-child(2){
+    margin-top: 5px;
+}
+
+.remember__me,
+.i__agree{
+    margin: -5px 0 20px 5px;
+}
+
+.remember__me label,
+.i__agree label{
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember__me label input,
+.i__agree label input{
+ accent-color: #0ef;
+ width: 20px;
+ height: 20px;
+}
+
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.sign__up-div{
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.sign__in-div {
+    font-size: 14px;
+    text-align: center;
+    margin: 7px 0px 15px 0px;
+}
+
+.sign__up-div p,
+.sign__in-div p{
+    color: #fff;
+}
+
+.sign__up-link,
+.sign__in-link{
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sign__up-link:hover,
+.sign__in-link:hover{
+    text-decoration: underline;
+}
+
+.wrapper:hover{
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
