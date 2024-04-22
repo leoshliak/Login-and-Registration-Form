@@ -29,6 +29,34 @@
          </div>
       </form>
     </div>
+      <div class="form-wrapper sign-up">
+        <form action="">
+          <h2>Sign Up</h2>
+          <div class="input-group">
+          <input type="text" required minlength="3" id="username2">
+          <label for="username2">Username</label>
+         </div>
+         <div class="input-group">
+            <input type="email" required id="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+            <label for="email">Email</label>
+           </div>
+         <div class="input-group">
+          <input type="password" required minlength="4" id="password2">
+          <label for="password2">Password</label>
+         </div>
+         <div class="input-group">
+          <input type="password" required minlength="4" id="confirm-password" onchange="checkPasswords()">
+          <label for="confirm-password">Confirm password</label>
+         </div>
+           <div class="i__agree">
+              <label for="agree"><input type="checkbox" id="agree">I agree to the terms and conditions</label>
+           </div> 
+           <button type="submit">Sign in</button>
+           <div class="sign__in-div">
+             <p>Already have an account?  <a href="#" class="sign__in-link">Sign In</a></p>
+           </div>
+        </form>
+      </div>
   </div>
 
     <script src="script.js"></script>
